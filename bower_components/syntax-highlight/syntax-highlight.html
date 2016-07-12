@@ -1,0 +1,10 @@
+<html><head><script src="../highlightjs/highlight.pack.js"></script>
+
+<template id="template-syntax-highlight">
+  <style>:host{display:block;}:host pre{overflow:auto;}:host code{font-family:monospace, monospace;font-size:1em;}</style>
+  <style id="theme"></style>
+  <pre><code><content></content></code></pre>
+</template>
+
+<script>window.SyntaxHighlight=function(){function t(t){var e=new URL("../highlightjs/styles/"+t+".css",o);return e.href}var e=document.currentScript,n=e.ownerDocument,o=new URL(n.baseURI),r=Object.create(HTMLElement.prototype);return Object.defineProperty(r,"lang",{configurable:!1,enumerable:!1,get:function(){return this.getAttribute("lang")},set:function(t){this.setAttribute("lang",t)}}),Object.defineProperty(r,"theme",{configurable:!1,enumerable:!1,get:function(){return this.getAttribute("theme")},set:function(t){this.setAttribute("theme",t)}}),r.createdCallback=function(){var t=this.innerHTML;this.shadowRoot=this.createShadowRoot();var e=n.querySelector("#template-syntax-highlight"),o=document.importNode(e.content,!0);this.shadowRoot.appendChild(o),this.shadowRoot.querySelector("code").textContent=t},r.attachedCallback=function(){var e=this.shadowRoot.querySelector("#theme"),n=this.getAttribute("lang"),o=this.getAttribute("theme")||"default",r=t(o);fetch(r).then(function(t){return t.text()}).then(function(t){e.innerHTML=t});var i=this.shadowRoot.querySelector("code");i.classList.add(n),hljs.highlightBlock(i)},r.attributeChangedCallback=function(e,n,o){switch(e){case"theme":var r=this.shadowRoot.querySelector("#theme"),i=t(o);fetch(i).then(function(t){return t.text()}).then(function(t){r.innerHTML=t});break;case"lang":var h=this.shadowRoot.querySelector("code");h.classList.add(n),h.classList.add(o),hljs.highlightBlock(h)}},document.registerElement("syntax-highlight",{prototype:r})}();</script>
+</head><body></body></html>
